@@ -8,7 +8,7 @@
 	onMount(async () => {
     try {
       // Fetch data from your Express API
-      const response = await fetch('http://localhost:3000/api/message');
+      const response = await fetch('https://api.brimerica.dev/message');
       const data = await response.json();
       message = data.message;
     } catch (error) {
@@ -27,16 +27,16 @@
       <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
     </a>
   </div>
-  <h1>Vite + Svelte</h1>
-  <p>{message}</p>
+  <!-- <h1>Vite + Svelte</h1> -->
+  <h1>{message}</h1>
 
-  <p>
+  <!-- <p>
     Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
   </p>
 
   <p class="read-the-docs">
     Click on the Vite and Svelte logos to learn more
-  </p>
+  </p> -->
 </main>
 
 <style>
