@@ -8,7 +8,7 @@
 	onMount(async () => {
     try {
       // Fetch data from your Express API
-      const response = await fetch('api/message');
+      const response = await fetch('/api/message');
       const data = await response.json();
       message = data.message;
     } catch (error) {
