@@ -5,7 +5,11 @@
 
 	let message = 'Loading...'
 
-	onMount(async () => {
+	onMount(() => {
+    getMessage();
+  })
+
+  async function getMessage(){
     try {
       // Fetch data from your Express API
       const response = await fetch('/api/message');
@@ -15,7 +19,7 @@
       console.error('Error fetching message:', error);
       message = 'Failed to load message.';
     }
-  })
+  };
 </script>
 
 <main>
@@ -28,7 +32,7 @@
     </a>
   </div>
   <!-- <h1>Vite + Svelte</h1> -->
-  <h1>{message}</h1>
+  <h1 on:click={getMessage}>{message}</h1>
 
   <!-- <p>
     Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
@@ -51,5 +55,8 @@
   }
   .logo.svelte:hover {
     filter: drop-shadow(0 0 2em #ff3e00aa);
+  }
+  h1{
+    cursor: pointer;
   }
 </style>
