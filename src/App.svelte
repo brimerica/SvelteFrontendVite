@@ -32,7 +32,7 @@
     </a>
   </div>
   <!-- <h1>Vite + Svelte</h1> -->
-  <h1 on:click={getMessage}>{message}</h1>
+  <h1 on:click={getMessage} title="Click for another message!">{message}</h1>
 
   <!-- <p>
     Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
